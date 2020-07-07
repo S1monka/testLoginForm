@@ -1,4 +1,5 @@
 # loginformnonuxt
+Все данные для входа лежат в файле db.json
 
 ## Project setup
 ```
