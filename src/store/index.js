@@ -10,12 +10,12 @@ const url = "http://localhost:3000/users";
 export default new Vuex.Store({
   plugins: [
     createPersistedState({
-      storage: window.sessionStorage,
-    }),
+      storage: window.sessionStorage
+    })
   ],
   state: {
     isLogin: false,
-    currentUser: {},
+    currentUser: {}
   },
   mutations: {
     setLogin(state, payload) {
@@ -27,11 +27,11 @@ export default new Vuex.Store({
     addContact(state, title) {
       state.currentUser.contacts.push({
         title: title,
-        id: state.currentUser.contacts.length + 1,
+        id: state.currentUser.contacts.length + 1
       });
     },
     editContact(state, { newValue, id }) {
-      state.currentUser.contacts.map((item) => {
+      state.currentUser.contacts.map(item => {
         if (item.id == id) {
           item.title = newValue;
         }
@@ -39,9 +39,9 @@ export default new Vuex.Store({
     },
     removeContact(state, id) {
       state.currentUser.contacts = state.currentUser.contacts.filter(
-        (item) => item.id !== id
+        item => item.id !== id
       );
-    },
+    }
   },
   actions: {
     async getUser({ commit }, { userName, password }) {
@@ -60,12 +60,12 @@ export default new Vuex.Store({
     },
     async postContacts({ state }) {
       await axios.patch(`${url}/${state.currentUser.id}`, {
-        contacts: state.currentUser.contacts,
+        contacts: state.currentUser.contacts
       });
-    },
+    }
   },
   getters: {
-    fullName: (state) =>
-      state.currentUser.firstName + " " + state.currentUser.lastName,
-  },
+    fullName: state =>
+      state.currentUser.firstName + " " + state.currentUser.lastName
+  }
 });

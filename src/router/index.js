@@ -8,7 +8,7 @@ const isLogin = () => {
   if (!store.state.isLogin) {
     return {
       name: "loginPage",
-      params: { message: "You need to login first" },
+      params: { message: "You need to login first" }
     };
   } else {
     return { name: "profilePage" };
@@ -18,7 +18,7 @@ const isLogin = () => {
 const routes = [
   {
     path: "/",
-    redirect: isLogin,
+    redirect: isLogin
   },
   {
     path: "/loginPage",
@@ -28,7 +28,7 @@ const routes = [
       if (store.state.isLogin) {
         next({ name: "profilePage" });
       } else next();
-    },
+    }
   },
   {
     path: "/profilePage",
@@ -38,18 +38,18 @@ const routes = [
       if (!store.state.isLogin) {
         next({ name: "loginPage" });
       } else next();
-    },
+    }
   },
   {
     path: "*",
-    redirect: isLogin,
-  },
+    redirect: isLogin
+  }
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes,
+  routes
 });
 
 export default router;

@@ -55,7 +55,7 @@ export default {
   data: () => ({
     search: "",
     addPressed: false,
-    editId: -1,
+    editId: -1
   }),
   computed: {
     ...mapGetters(["fullName"]),
@@ -69,10 +69,10 @@ export default {
       return this.$store.state.currentUser.contacts;
     },
     filteredContacts() {
-      return this.contacts.filter((contact) => {
+      return this.contacts.filter(contact => {
         return contact.title.toLowerCase().includes(this.search.toLowerCase());
       });
-    },
+    }
   },
   methods: {
     editContact(id) {
@@ -98,11 +98,11 @@ export default {
     logout() {
       this.$store.commit("setLogin", false);
       this.$router.push("loginPage");
-    },
+    }
   },
   beforeDestroy() {
     this.$store.dispatch("postContacts");
-  },
+  }
 };
 </script>
 
