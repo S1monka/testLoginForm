@@ -1,0 +1,135 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "userName": "Leilani_Bednar",
+      "password": "JRG6wfdGmsI3wmY",
+      "firstName": "Winston",
+      "lastName": "Heidenreich",
+      "email": "Rocio.Shields@yahoo.com",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/santi_urso/128.jpg",
+      "contacts": [
+        {
+          "title": "Рапапа",
+          "id": "1"
+        },
+        {
+          "title": "Кирилл",
+          "id": 2
+        },
+        {
+          "title": "Автомойка",
+          "id": 3
+        },
+        {
+          "title": "Мама",
+          "id": 4
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "userName": "Alexandra19",
+      "password": "d4iXBJdiKiJQgF1",
+      "email": "Rocio.Shields@yahoo.com",
+      "firstName": "Linnea",
+      "lastName": "Tromp",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/jpscribbles/128.jpg",
+      "contacts": [
+        {
+          "id": "1",
+          "title": "Стажёр"
+        },
+        {
+          "id": "2",
+          "title": "Жена"
+        },
+        {
+          "title": "Переводчик",
+          "id": 4
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "userName": "Oleta_Ankunding",
+      "password": "AExdZNrz0ABKIOc",
+      "email": "Elda.Kunze93@gmail.com",
+      "firstName": "Eunice",
+      "lastName": "Toy",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/elisabethkjaer/128.jpg",
+      "contacts": [
+        {
+          "id": "1",
+          "title": "Работа"
+        },
+        {
+          "id": "2",
+          "title": "Жена"
+        },
+        {
+          "id": "3",
+          "title": "Первый ребёнок"
+        },
+        {
+          "id": "4",
+          "title": "Любимый ребёнок)"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "userName": "Dedrick.Lesch8",
+      "password": "jsFwB9wGUG3BhCB",
+      "email": "Joanne_OConner62@yahoo.com",
+      "firstName": "Rene",
+      "lastName": "Cassin",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/nckjrvs/128.jpg",
+      "contacts": [
+        {
+          "id": "1",
+          "title": "Работа"
+        },
+        {
+          "id": "2",
+          "title": "Жена"
+        },
+        {
+          "id": "3",
+          "title": "Первый ребёнок"
+        },
+        {
+          "id": "4",
+          "title": "Любимый ребёнок)"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "userName": "Rhiannon_Franecki",
+      "password": "E1psSBD4Bhbnkw3",
+      "email": "Sallie91@hotmail.com",
+      "firstName": "Michale",
+      "lastName": "Rath",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/cbracco/128.jpg",
+      "contacts": [
+        {
+          "id": "1",
+          "title": "Работа"
+        },
+        {
+          "id": "2",
+          "title": "Жена"
+        },
+        {
+          "id": "3",
+          "title": "Первый ребёнок"
+        },
+        {
+          "id": "4",
+          "title": "Любимый ребёнок)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,30 +1,55 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import store from "../store";
 
 Vue.use(VueRouter);
+
+const isLogin = () => {
+  if (!store.state.isLogin) {
+    return {
+      name: "loginPage",
+      params: { message: "You need to login first" },
+    };
+  } else {
+    return { name: "profilePage" };
+  }
+};
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    redirect: isLogin,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
+    path: "/loginPage",
+    name: "loginPage",
+    component: () => import("@/views/loginPage.vue"),
+    beforeEnter: (to, from, next) => {
+      if (store.state.isLogin) {
+        next({ name: "profilePage" });
+      } else next();
+    },
+  },
+  {
+    path: "/profilePage",
+    name: "profilePage",
+    component: () => import("@/views/profilePage.vue"),
+    beforeEnter: (to, from, next) => {
+      if (!store.state.isLogin) {
+        next({ name: "loginPage" });
+      } else next();
+    },
+  },
+  {
+    path: "*",
+    redirect: isLogin,
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;
